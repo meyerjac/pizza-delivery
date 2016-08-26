@@ -9,22 +9,31 @@
     <title>Pizza Delivery</title>
   </head>
   <body>
-    <div class="container">
+  <div class="container">
       <h1>Order your pizzas!</h1><br>
       <h4>I hear you have to order like 10 pizzas for a big party, and you'll want to look over them and see what you odered when you are done</h4>
       <div class="jumbotron">
-        <form id=pizzaSizeForm>
-          <h4>Please select your pizza size:</h4>
-          <select class="form-control" id="size">
-            <option value="1">16-inch Crust!</option>
-            <option value="2">24-inch Crust!!</option>
-            <option value="3">32-inch Crust!!!</option>
-            <option value="4">50-inch Crust!!!!</option>
-          </select><br>
+        <form>
           <div class="form-group">
-             <label for="toppings">Becuase this pizza shop exists in an alternate reality, we are capable of getting any and all pizza toppings. generally $1 per topping, but the shortage of pepperoni and olives has forced us to hike prices!</label>
-             <input type="text" class="form-control" id="pizzaToppingsInput">
+             <label for="size">Becuase this pizza shop exists in an alternate reality, we can make <em>ANY</em> sized pizza. Please enter how big [in diameter] you would like your pizza to be. please enter number in inches </label>
+             <input type="text" class="form-control" id="size">
+          </select><br>
+          <select class="form-control" id="topping1">
+            <option value="1">pepperoni</option>
+            <option value="2">pineapple</option>
+            <option value="3">canadian bacon</option>
+            <option value="4">Olives</option>
+          </select>
              <br>
+             <h3>Please enter your address where we will deliver your pizza!</h3> <br>
+             <div id="addressInputBox">
+              <div class="new-address1">
+                <div class="form-group">
+                  <label for="address">enter your entire address</label>
+                  <input type="text" id="address1" class="form-control new-address">
+                </div>
+                </div>
+              </div>
              <button type="submit" id="orderButton" class = "btn btn-success" name="button">Order your pizza</button>
           </div>
         </form>

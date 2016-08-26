@@ -1,26 +1,58 @@
 //Business Logic
-function pizza(size, toppings) {
+function pizzaOrder(size, topping, address) {
   this.pizzaSize = size;
-  this.pizzaToppings = toppings;
+  this.pizzaToppings = topping;
+  this.pizzaDeliveryAddress = address;
 }
 
-function address(street, city, state) {
-  this.street = street;
-  this.city = city;
-  this.state = state
-}
-
-pizza.prototype.fullPizzaName = function() {
-  return ("you ordered a" + this.pizzaSize + "")
+pizza.prototype.orderName = function() {
+  return this.PizzaSize + " " + this.pizzaToppings
 }
 
 
-//User Interface Logic
-$(document).ready(function() {
-  $("order").submit(function(event) {
-  event.preventDefault();
-  var inputtedSize = $("#size").val();
-  var inputtedToppings = $("#size").val();
+var order1 = new PizzaOrder(sizeInput + toppingInput + addressInput1)
+
+
+
+$("document").ready(function() {
+  $("form").submit(function(event) {
+  event.preventdefault();
+  var sizeInput=$("#size").val();
+  var toppingInput=$("#toppings").val();
+  var addressInput1=$("#address1").val();
+  var order1 = new PizzaOrder(sizeInput + toppingInput + addressInput1);
+
+
 
 })
-})
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//
+// if (input <= 9) {
+//   alert("We won't make a pizza under 10 inches, order a real pizza")
+// }
+// if ((input >=10) && (input <=30)) {
+//   return(15)
+// }
+// if (input >=31) && (input <=40) {
+//   return(25)
+// }
+// if (input >=41)
+//   return(35)
+}
