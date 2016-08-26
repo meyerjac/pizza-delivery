@@ -27,10 +27,10 @@ _This app is written in Javascript_
 
 ## Specs
 
-rule: User can choose between 3 different size pizzas: example: Large, medium, and small.
+rule: User will input the size of their pizza in a text box.
 
-rule: User can choose what toppings go on the pizza:
-example: Canadian bacon, Bacon, Sausage, pepperoni, Steak
+rule: User can choose what topping to go on the pizza:
+example: Canadian bacon, or Bacon,or Sausage,or  pepperoni, or Steak
 
 rule: when toppings are chosen, subtotal is calculated as the pizza is built.
 
@@ -39,7 +39,7 @@ if select more-return or alert user there a
 
 rule: when toppings are chosen, subtotal is calculated as the pizza is built.
 
-ule: final price of pizza will be dependent on the properties of the pizza chosen.
+rule: final price of pizza will be dependent on the properties of the pizza chosen.
 example: bigger or more toppings-more expensive. small pizza and fewer toppings-less expensive
 
 ### License

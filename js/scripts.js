@@ -1,29 +1,52 @@
 //Business Logic
-function pizzaOrder(size, topping, address) {
+function pizzaOrder(size, topping) {
   this.pizzaSize = size;
-  this.pizzaToppings = topping;
-  this.pizzaDeliveryAddress = address;
+  this.pizzaTopping = topping;
 }
 
-pizza.prototype.orderName = function() {
-  return this.PizzaSize + " " + this.pizzaToppings
+function deliveryAddress(street, city, state) {
+  this.street = street;
+  this.city = city;
+  this.state = state;
 }
 
+pizzaOrder.prototype.orderName = function() {
+  return this.pizzaSize + " " + this.pizzaTopping;
+};
 
-var order1 = new PizzaOrder(sizeInput + toppingInput + addressInput1)
+deliveryAddress.prototype.WhereAreWeTakingThisPizzaThisTime = function() {
+  return this.street + "Is nearby! I'll be there shortly!";
+};
 
+var totalprice = (sizeInput + toppingInput1);
 
-
-$("document").ready(function() {
+// UI Logic
+$(document).ready(function() {
   $("form").submit(function(event) {
-  event.preventdefault();
+  event.preventDefault();
   var sizeInput=$("#size").val();
-  var toppingInput=$("#toppings").val();
+  var toppingInput1=$("#topping1").val();
   var addressInput1=$("#address1").val();
-  var order1 = new PizzaOrder(sizeInput + toppingInput + addressInput1);
+  var newOrder = new pizzaOrder(sizeInput, toppingInput1);
+    console.log(newOrder);
+  $(".price").text(newOrder.pizzaSize);
+  // $(".last-name").text(newContact.lastName);
 
 
+  // var newAddress = new deliveryAddress(street, city, state);
+  //   console.log(newAddress);
 
+  // $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
+  //
+  //   $(".contact").last().click(function() {
+  //     $("#show-contact").show();
+  //     $("#show-contact h2").text(newContact.firstName);
+  //     $(".first-name").text(newContact.firstName);
+  //     $(".last-name").text(newContact.lastName);
+  //   });
+  //
+  //   $("input#new-first-name").val("");
+  //   $("input#new-last-name").val("");
 })
 });
 
@@ -55,4 +78,3 @@ $("document").ready(function() {
 // }
 // if (input >=41)
 //   return(35)
-}
