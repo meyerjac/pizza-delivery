@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pizza Delivery</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Order your pizzas!</h1><br>
+      <h4>I hear you have to order like 10 pizzas for a big party, and you'll want to look over them and see what you odered when you are done</h4>
+      <div class="jumbotron">
+        <form id=pizzaSizeForm>
+          <h4>Please select your pizza size:</h4>
+          <select class="form-control" id="size">
+            <option value="1">16-inch Crust!</option>
+            <option value="2">24-inch Crust!!</option>
+            <option value="3">32-inch Crust!!!</option>
+            <option value="4">50-inch Crust!!!!</option>
+          </select><br>
+          <div class="form-group">
+             <label for="toppings">Becuase this pizza shop exists in an alternate reality, we are capable of getting any and all pizza toppings. generally $1 per topping, but the shortage of pepperoni and olives has forced us to hike prices!</label>
+             <input type="text" class="form-control" id="pizzaToppingsInput">
+             <br>
+             <button type="submit" id="orderButton" class = "btn btn-success" name="button">Order your pizza</button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
